@@ -18,6 +18,8 @@ public class Randomowe{
         else{
             System.out.println("You lost");
         }
+
+        System.out.println("test");
     }
 
 }
