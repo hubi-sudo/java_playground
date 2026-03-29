@@ -17,21 +17,9 @@ public class Calculator {
         second_number = scanner.nextDouble();
 
 
-        if (sign.equals("/")){
-            if (second_number == 0){
+        if (sign.equals("/") && second_number == 0){
                 System.out.println("You cannot divide by zero");
             }
-            else{
-                switch (sign){
-                    case "*"  -> System.out.println("The answer is: " + (first_number * second_number));
-                    case "+"  -> System.out.println("The answer is: " + (first_number + second_number));
-                    case "-"  -> System.out.println("The answer is: " + (first_number - second_number));
-                    case "/"  -> System.out.println("The answer is: " + (first_number / second_number));
-                    case "^"  -> System.out.println("The answer is: " + Math.pow(first_number, second_number));
-                }
-
-            }
-        }
         else{
             switch (sign){
                 case "*"  -> System.out.println("The answer is: " + (first_number * second_number));
@@ -39,13 +27,15 @@ public class Calculator {
                 case "-"  -> System.out.println("The answer is: " + (first_number - second_number));
                 case "/"  -> System.out.println("The answer is: " + (first_number / second_number));
                 case "^"  -> System.out.println("The answer is: " + Math.pow(first_number, second_number));
+                }
+
             }
 
-        }
+
 
 
         scanner.close();
 
 
-    }
-}
+
+}}
