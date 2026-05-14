@@ -46,10 +46,10 @@ public class Garnek {
     public void wlaczGarnek(){
         System.out.println("Włączanie garnka");
     }
-    public void gotujPrzezPolGodziny(){
+    private void gotujPrzezPolGodziny(){
         System.out.println("Gotowanie przez 30 minut");
     }
-    public void wylaczGarnek(){
+    private void wylaczGarnek(){
         System.out.println("Wylaczanie garnka");
     }
 
