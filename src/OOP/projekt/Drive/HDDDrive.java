@@ -1,13 +1,13 @@
 package OOP.projekt.Drive;
 
-import OOP.projekt.File;
+import OOP.projekt.file.File;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class HDDDrive implements Drive{
-    List<File> files = new ArrayList<>();
+    private List<File> files = new ArrayList<>();
 
     @Override
     public void addFile(File file) {
