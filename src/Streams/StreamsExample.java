@@ -1,7 +1,5 @@
 package Streams;
 
-import Streams.Employee;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +8,7 @@ public class StreamsExample {
     // Lista pracowników jako pole klasy
     private List<Employee> employees = new ArrayList<>();
 
-    // Metoda setup inicjalizująca dane (odpowiednik @BeforeEach bez JUnit)
+    // Metoda setup inicjalizująca dane
     public void setUp() {
         Employee employee1 = new Employee("Honkytonk", "Cumbercooch", 25, List.of("Java", "Spring"));
         Employee employee2 = new Employee("Brewery", "Chickenstrips", 31, List.of("C#", ".NET"));
@@ -41,4 +39,15 @@ public class StreamsExample {
                 .forEach(employee -> System.out.println(employee));
     }
 
+    // PUNKT STARTOWY PROGRAMU - To pozwala odpalić kod w IntelliJ
+    public static void main(String[] args) {
+        // 1. Tworzymy obiekt naszej klasy
+        StreamsExample example = new StreamsExample();
+
+        // 2. Wypełniamy listę employees danymi
+        example.setUp();
+
+        // 3. Odpalamy strumień, który wypisze pracowników w konsoli
+        example.firstStream();
+    }
 }
