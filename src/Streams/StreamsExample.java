@@ -29,7 +29,6 @@ public class StreamsExample {
         employees.add(employee8);
     }
 
-    // Metoda getter dająca dostęp do listy pracowników
     public List<Employee> getEmployees() {
         return employees;
     }
@@ -39,15 +38,10 @@ public class StreamsExample {
                 .forEach(employee -> System.out.println(employee));
     }
 
-    // PUNKT STARTOWY PROGRAMU - To pozwala odpalić kod w IntelliJ
     public static void main(String[] args) {
-        // 1. Tworzymy obiekt naszej klasy
+
         StreamsExample example = new StreamsExample();
-
-        // 2. Wypełniamy listę employees danymi
         example.setUp();
-
-        // 3. Odpalamy strumień, który wypisze pracowników w konsoli
         example.firstStream();
     }
 }
