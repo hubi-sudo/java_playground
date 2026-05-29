@@ -2,6 +2,7 @@ package Streams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamsExample {
 
@@ -35,8 +36,18 @@ public class StreamsExample {
 
     public void firstStream() {
         employees.stream()
-                .forEach(employee -> System.out.println(employee));
+                .map(employee -> employee.getFirstName() + " " + employee.getLastName())
+                .forEach(System.out::println);
     }
+
+
+    public void flatMapOperation() {
+        List<String> allSkills = employees.stream()
+                .flatMap(employee -> employee.getSkills().stream())
+                .collect(Collectors.toList());
+        System.out.println(allSkills);
+    }
+
 
     public static void main(String[] args) {
 
