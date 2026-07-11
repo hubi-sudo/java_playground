@@ -4,18 +4,19 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class CheckedVsUnchecked {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
-    readFile("myFile.txt");
-
-    }
-
-    private static void readFile(String fileName) throws FileNotFoundException {
-
-        FileReader reader = new FileReader(fileName);
+        String name = null;
+        printLength(name);
 
     }
 
-
+    private static void printLength (String myString){
+        try {
+            System.out.println(myString.length());
+        } catch (NullPointerException npe) {
+            System.out.println("String cannot be null");
+        }
+    }
 
 }
