@@ -4,19 +4,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class CheckedVsUnchecked {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
     readFile("myFile.txt");
 
     }
 
-    private static void readFile(String fileName) {
-        try {
-            FileReader reader = new FileReader(fileName);
-        }
-        catch (FileNotFoundException fnfe){
-            System.out.println("That file doesnt exist");
-        }
+    private static void readFile(String fileName) throws FileNotFoundException {
+
+        FileReader reader = new FileReader(fileName);
+
     }
 
 
