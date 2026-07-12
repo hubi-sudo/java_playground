@@ -3,7 +3,7 @@ package Lambda_Functional;
 public class lambda {
     public static void main(String[] args) {
 
-
+        /*
         String name = "Hubert";
         char symbol = '!';
         MyInterface myInterface = (x,y) -> {
@@ -17,6 +17,8 @@ public class lambda {
         };
 
         myInterface2.message(name,symbol);
+        */
 
+        MyFrame myFrame = new MyFrame();
     }
 }
