@@ -8,7 +8,7 @@ public class OptionalTutorial {
         Optional<Cat> optionalCat = findCatByName("Fred");
 
         optionalCat.map(Cat::getAge)
-                .orElse(0)
+                .orElse(0);
 
 
 
